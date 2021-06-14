@@ -14,7 +14,7 @@ Please note this image is explictly intended to be run as a non-privileged user.
 ```bash
 UID=999
 
-docker run -i -t -u ${UID}:0 1and1internet/ubuntu-16-customerssh bash
+docker run -i -t -u ${UID}:0 1and1internet/debian-9-customerssh bash
 ```
 
 or
@@ -23,7 +23,7 @@ or
 UID=999
 NAME=sshcron
 
-docker run --name=${NAME} -d -u ${UID}:0 1and1internet/ubuntu-16-customerssh /init/run_forever.sh
+docker run --name=${NAME} -d -u ${UID}:0 1and1internet/debian-9-customerssh /init/run_forever.sh
 docker exec -i -t ${NAME} bash
 ```
 
